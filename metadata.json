@@ -1,0 +1,6 @@
+{
+  "name": "Đoàn Tàu Bí Ẩn – Khám Phá Python List",
+  "description": "Ứng dụng giáo dục tương tác sinh động giúp học sinh khám phá Python List, quy tắc Index bắt đầu từ 0 và các thao tác danh sách thông qua trò chơi trực quan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

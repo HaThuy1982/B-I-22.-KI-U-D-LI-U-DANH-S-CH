@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Railway Track Pattern */
+.rail-track-bg {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #78350f 0px,
+    #78350f 14px,
+    transparent 14px,
+    transparent 44px
+  );
+}
+
+.rail-ties {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #854d0e 0px,
+    #854d0e 12px,
+    #ca8a04 12px,
+    #ca8a04 14px,
+    transparent 14px,
+    transparent 48px
+  );
+}
+
+/* Custom scrollbar for horizontal train cars */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes chugga {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-chugga {
+  animation: chugga 1.2s ease-in-out infinite;
+}
+
+@keyframes puffSmoke {
+  0% { transform: scale(0.6) translateY(0); opacity: 0.8; }
+  100% { transform: scale(1.6) translateY(-25px); opacity: 0; }
+}
+
+.animate-smoke {
+  animation: puffSmoke 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
